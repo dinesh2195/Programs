@@ -1,0 +1,48 @@
+import java.util.*;
+public class sodusingmethod {
+	public static void main(String[] args) {
+		int n1,n2,n3,n4,a,count = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter first number");
+		n1=sc.nextInt();
+		
+		System.out.println("Enter last number");
+		n2=sc.nextInt();
+		
+		System.out.println("Enter desired number");
+		n3=sc.nextInt();
+		//n4=sc.nextInt();
+		
+		/*int a1 = sodusingmethod.sumofdigits(n1);
+		System.out.println(a1);*/
+		for(a=n1;a<=n2;a++)
+		{
+		//int z=a;	
+		int b=sodusingmethod.sumofdigits(a);
+		//System.out.println(b);
+		int c=sodusingmethod.sumofdigits(b);
+		
+		if(c==n3)
+			{
+				count++;
+				System.out.println("Num"+count+"="+a);
+			}
+				
+		}
+	}
+	
+	
+	static int sumofdigits(int k) {
+		//System.out.println(k);
+		int i=0, sum = 0;		
+		while(k!=0)
+		{
+		i=k%10;
+		sum+=i;
+		k/=10;
+		}
+	return sum;
+	}
+
+}
