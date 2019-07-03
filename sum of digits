@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Sumofdigits {
+	
+	public static void main(String[] args) {
+		
+		int n1,n2,n3,i,j,k,l,s,sum=0,sum1=0,count=0;
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Enter starting number"); 
+		n1=sc.nextInt();
+		
+		System.out.println("Enter last number"); 
+		n2=sc.nextInt();
+		
+		System.out.println("Enter expected number"); 
+		n3=sc.nextInt();
+		
+		for(k=n1 ;k<=n2 ;k++)
+		{
+		    l=k; i=0;sum=0;j=0;s=0;sum1=0; 
+		    
+		    while(l != 0)
+			{
+				i =l % 10;
+				sum = sum + i;
+				l = l / 10;
+				
+			}
+			s=sum;
+			while(s!=0)
+			{
+				j=s%10;
+				sum1=sum1+j;
+				s/=10;
+			}
+			if(sum1==n3)
+			{
+				count++;
+		System.out.println("Num"+count+"="+k);
+		}
+			
+		}
+		
+		
+	}
+}
