@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+public class oddleftevenright {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enetr no of elements");
+		
+		int n= sc.nextInt();
+		
+		int[] a=new int[n];
+		
+		System.out.println("Enetr the elements");
+		
+		for(int x=0;x<n;x++) 
+		{
+			a[x]=sc.nextInt();
+		}
+		
+		//sorting
+		
+		int temp=0,count=0;
+		
+		for(int i=0;i<n;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			
+			}
+			
+			if(a[i]%2 != 0)
+			{
+				count++;
+			}
+		}
+		
+		System.out.println(count	);
+		
+		for(int o=0;o<n;o++)
+		{
+			
+			System.out.println(a[o]);
+			
+		}
+	
+		
+		int temp1=0;
+		int b[] = new int[n];
+		
+	for(int k=0;k<n;k++)
+	{
+		if(a[k]%2 == 0)
+		{
+			b[count]=a[k];
+			count++;
+		}
+		else
+		{
+			b[temp1]=a[k];
+			temp1++;
+		}
+	}
+	
+	
+	System.out.println("after arranging");
+	
+	for(int l=0;l<n;l++)
+	{
+		
+		System.out.println(b[l]);
+		
+	}
+	
+	System.out.println("first array");
+	
+	for(int m=0;m<n;m++)
+	{
+		
+		System.out.print(a[m]);
+		
+	}
+	
+	}
+}
