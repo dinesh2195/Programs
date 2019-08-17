@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class holesinanumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n=sc.nextInt();
+		//int[] holes= {1,0,0,0,1,0,1,0,2,1};
+		int a,hole=0;
+		while(n>0)
+		{
+			//getting last digit to find 
+			a=n%10;
+			//incrementing hole if the number has hole according to its index value declared as holes 
+			
+			//using if
+			
+			if(a==0 | a==4 | a==6 | a==9)
+			{
+				hole++;
+			}
+			else if(a==8)
+			{
+				hole=hole+2;
+			}
+			else
+				hole=hole;
+			
+			//using switch
+			
+			/*switch (a)
+			{
+			case 0:
+				hole++;
+				break;
+			case 1:
+				//hole=hole;
+				break;
+			case 2:
+				//hole=hole;
+				break;
+			case 3:
+				hole=hole;
+				break;
+			case 4:
+				hole++;
+				break;
+			case 5:
+				hole=hole;
+				break;
+			case 6:
+				hole++;
+				break;
+			case 7:
+				hole=hole;
+				break;
+			case 8:
+				hole=hole+2;
+				break;
+			case 9:	
+				hole++;
+				break;
+			}*/
+			
+			//using array holes[]
+			
+			//hole+=holes[a];
+			//removing last digit
+			n/=10;
+			
+		}
+		System.out.println(hole);
+	}
+
+}
