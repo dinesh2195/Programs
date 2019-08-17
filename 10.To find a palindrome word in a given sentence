@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Palindromeinsentence {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Enter the sentence");
+		Scanner sc = new Scanner(System.in);
+		String sen=sc.nextLine();
+		System.out.println(sen);
+		String words[]=sen.split(" ");
+		String b="";
+//		int i=words.length;
+//		System.out.println(i);
+		for(int i=0;i<words.length;i++)
+		{
+			b="";
+			String s=words[i];
+			int a=s.length();
+			
+			for(int j=a-1;j>=0;j--)
+			{				
+				b=b+s.charAt(j);
+			}
+			if(s.equalsIgnoreCase(b))
+			{
+				System.out.println( "Palindrome words: " +s);
+			}
+			
+			
+			
+		}	
+		
+	}
+
+}
