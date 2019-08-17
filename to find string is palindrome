@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Dummy {
+
+	public static void main(String[] args) {
+//		
+		
+		
+	
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter your Palindrome String");
+
+		String palindrome =sc.nextLine();
+		int count=0;
+		int countlength=palindrome.length()-1;
+
+		for(int i=0;i<palindrome.length();i++)
+		{
+		if(palindrome.charAt(i)==palindrome.charAt(countlength))
+		{
+		count++;
+		}
+		countlength--;
+
+		}
+		
+		
+		if(count==palindrome.length())
+		{
+		System.out.println(" String is palindrome");
+		}
+		else 
+		{
+		System.out.println(" Strin is not palindrome ");
+		}
+
+		}
+
+
+}
