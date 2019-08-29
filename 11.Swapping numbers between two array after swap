@@ -1,0 +1,70 @@
+import java.util.Arrays;
+
+public class Static {
+	public void sort(int d[],int[] e)
+	{
+		int len = d.length+e.length;
+		int c[] = new int [len];
+		int temp=0,temp1=0;
+		for (int i=0; i<len;i++)
+		{
+			if(i<d.length)
+			{
+				c[i] = d[i];
+			}
+			
+			else
+			{
+				c[i] = e[temp];
+				temp++;
+			}
+		}
+		
+		Arrays.sort(c);
+		
+		for (int j=0; j<len;j++)
+		{
+			if(j<d.length)
+			{
+				d[j] = c[j]; 
+			}
+			
+			else
+			{
+				e[temp1]=c[j];
+				temp1++;
+			}
+				
+			
+		}
+		int temp2=0;
+		for(int k=0;k<len;k++)
+		{
+			if(k<d.length)
+			System.out.print("d"+k+"="+d[k]+" ");
+			else 
+			{
+				System.out.print("e"+temp2+"="+e[temp2]+" ");
+				temp2++;
+			}
+	}
+	}	
+	
+	public static void main(String[] args) {
+		/*
+		 * int num=Static.fun1(); System.out.println(num);
+		 */
+		//System.out.println(fun3());
+		int a[] = {2,6,4,1};
+		int b[] = {8,3,7,5};
+		Static s=new Static();
+		
+		s.sort(a,b);
+		
+		
+		
+		
+		}
+
+	}
+
