@@ -27,11 +27,13 @@ public class Static {
 			if(j<d.length)
 			{
 				d[j] = c[j]; 
+				System.out.println(d[j]);
 			}
 			
 			else
 			{
 				e[temp1]=c[j];
+				System.out.println(e[temp1]);
 				temp1++;
 			}
 				
